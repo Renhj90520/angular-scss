@@ -1,0 +1,29 @@
+@import '../../../scss/scssshared/root/colors';
+
+
+:host(.color--01){
+    --background: #1f778d;
+    --foreground: white;
+    .modal{
+        background: $g-root__color--primary--02a;
+        color: white;
+
+        &__close{
+            border: 1px solid white;
+
+            &::before,
+            &::after
+            {
+                background: white;
+            }
+        }
+
+        &__highlight{
+            background: $g-root__color--secondary--04b;
+            overflow: hidden;
+            padding: 0 1em;
+
+            --background: #77a032;
+        }
+    }
+}

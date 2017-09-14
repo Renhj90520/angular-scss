@@ -1,0 +1,11 @@
+:host{
+    border-top: 0.0625em solid #eee;
+    display: block;
+    font-size: 1rem;
+}
+
+@media(max-width: 58em){
+    :host{
+        font-size: 0.8125em;
+    }
+}

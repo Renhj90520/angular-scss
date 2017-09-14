@@ -1,0 +1,38 @@
+@import 'scssshared/layout/container';
+@import 'scssshared/layout/grid';
+@import 'scssshared/typography/headers';
+@import 'scssshared/typography/paragraph';
+
+.content{
+    @include g-layout__container;
+    &__sections{
+        @include g-layout__grid;
+    }
+    &__title{
+        @include g-root__h2;
+    }
+    &__sub-title{
+        @include g-root__h3;
+    }
+    &__paragraph{
+        @include g-root__paragraph;
+    }
+
+    @media(min-width: 52rem){
+        &__primary{
+            @include g-layout__grid__item--08;
+        }
+        &__secondary{
+            @include g-layout__grid__item--04;
+        }
+    }
+
+    @media(max-width:52rem){
+        &__primary{
+            @include g-layout__grid__item--12;
+        }
+        &__secondary{
+            @include g-layout__grid__item--12;
+        }
+    }
+}

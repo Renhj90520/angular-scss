@@ -1,0 +1,19 @@
+<a class="trigger" (click)="toggleOpenClose()">
+    <ng-content></ng-content>
+</a>
+<div class="shield" (click)="toggleOpenClose()" [hidden]="!isOpen"></div>
+<div class="modal" [hidden]="!isOpen">
+    <a class="modal__close" (click)="toggleOpenClose()">
+        close
+    </a>
+    <div class="modal__content">
+        <ng-content select="[slot-content]"></ng-content>
+
+        <div class="modal__highlight">
+            <p>
+                Angular 2.0+ revolutionizes the way that we architect CSS. But before we become Angular styling ninjas we need to take a step back and look at all the different ways that things can be done.
+            </p>
+            <ng-content select="[slot-content-highlight]"></ng-content>
+        </div>
+    </div>
+</div>

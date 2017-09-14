@@ -1,0 +1,12 @@
+@import 'scssshared/root/links';
+@import 'scssshared/typography/headers';
+
+:host{
+    font-size: 1rem;
+}
+h1{
+    @include g-root__h1;
+}
+strong{
+    @include g-root__link;
+}

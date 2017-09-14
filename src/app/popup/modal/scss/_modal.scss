@@ -1,0 +1,45 @@
+.modal{
+    backface-visibility: hidden;
+    border-radius: .5em;
+    font-size: 1rem;
+    left: 50%;
+    min-width: 33.3125rem;
+    padding: 0 1.5em 1.5em;
+    position: fixed;
+    top: 50%;
+    transform: translate(-50%,-50%);
+    z-index: 1000;
+
+    &__close{
+        border: 1px solid;
+        border-radius: 50%;
+        cursor: pointer;
+        display: block;
+        height: 1.7em;
+        overflow: hidden;
+        position: absolute;
+        right: 0.5em;
+        top: .5em;
+        width: 1.7em;
+        text-indent: -9999px;
+
+        &::before,
+        &::after{
+            content: '';
+            height: .125em;
+            left: .25em;
+            margin-top: -.0625em;
+            position: absolute;
+            top: 50%;
+            right: .25em;
+        }
+
+        &::before{
+            transform: rotate(45deg);
+        }
+
+        &::after{
+            transform: rotate(-45deg);
+        }
+    }
+}
